@@ -1,5 +1,4 @@
 var map;
-
 function initMap() {
     // 載入路線服務與路線顯示圖層
     var directionsService = new google.maps.DirectionsService();
@@ -7,7 +6,7 @@ function initMap() {
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: new google.maps.LatLng(25.0486942, 121.5449298),
-        zoom: 15,
+        zoom: 16,
         zoomControl: false,
         mapTypeControl: false,
         scaleControl: false,
@@ -190,33 +189,6 @@ function initMap() {
                 ]
             }
         ]
-    });
-
-    // 放置路線圖層
-    directionsDisplay.setMap(map);
-
-    // 路線相關設定
-    var request = {
-        origin: {
-            lat: 25.051865,
-            lng: 121.544745
-        },
-        destination: {
-            lat: 25.048136,
-            lng: 121.547851
-        },
-        travelMode: 'DRIVING'
-    };
-
-    // 繪製路線
-    directionsService.route(request, function (result, status) {
-        if (status == 'OK') {
-            // 回傳路線上每個步驟的細節
-            console.log(result.routes[0].legs[0].steps);
-            directionsDisplay.setDirections(result);
-        } else {
-            console.log(status);
-        }
     });
 
     var iconBase = 'img/map/';

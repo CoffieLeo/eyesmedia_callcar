@@ -11,6 +11,14 @@ body#index_04 .call-car-map {
   height: calc(100vh - 57px);
 }
 
+body.open-popup .wrap {
+  -webkit-filter: blur(3px);
+}
+
+body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-taxi-wave {
+  display: block;
+}
+
 .call-car-box {
   width: 100%;
   position: relative;
@@ -235,6 +243,77 @@ body#index_04 .call-car-map {
   display: none;
 }
 
+.popup-box {
+  text-align: center;
+}
+
+.popup-box .img-box {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -25px;
+}
+
+.popup-box .callcar-info {
+  position: relative;
+  padding-left: 25px;
+  text-align: left;
+}
+
+.popup-box .callcar-info:before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #35A88E;
+  left: 15px;
+}
+
+.popup-box .callcar-info li {
+  padding: 20px 0;
+  position: relative;
+}
+
+.popup-box .callcar-info li:before {
+  content: '';
+  display: block;
+  width: 11px;
+  height: 11px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -15px;
+}
+
+.popup-box .callcar-info li:first-child:before {
+  border: 3px solid #F55100;
+  border-radius: 100%;
+}
+
+.popup-box .callcar-info li:last-child {
+  margin-bottom: 0;
+}
+
+.popup-box .callcar-info li:last-child:before {
+  border: 3px solid #50E3C2;
+}
+
+.popup-box .callcar-info p span {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.popup-box .default-btn {
+  margin: auto;
+}
+
 .discount-tikcet-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -284,13 +363,14 @@ body#index_04 .call-car-map {
 
 .info-card-box {
   background-color: #fff;
+  border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
 }
 
 .info-card-box .info-title {
   padding: 15px;
   text-align: center;
   background: #4A90E2;
-  border-radius: 10px 10px 0px 0px;
   color: #fff;
 }
 
@@ -388,6 +468,51 @@ body#index_04 .call-car-map {
 .info-card-box .info-content .user-img img {
   width: 100%;
   height: 100%;
+}
+
+.info-card-box .taxi-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 15px;
+}
+
+.info-card-box .taxi-content .taxi-item {
+  margin: 0 10px;
+}
+
+.info-card-box .taxi-content .taxi-item .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 13px;
+  color: #4A4A4A;
+}
+
+.info-card-box .taxi-content .taxi-item .material-icons {
+  font-size: 18px;
+  vertical-align: sub;
+  color: #4A4A4A;
+}
+
+.info-card-box .taxi-content .taxi-item .item-desc {
+  margin: 3px 15px 3px 0;
+}
+
+.info-card-box .taxi-content .taxi-item.open-note-box {
+  color: #4A90E2;
+}
+
+.info-card-box .taxi-content .taxi-item.open-note-box .material-icons {
+  color: #4A90E2;
 }
 
 .other-discount-list {

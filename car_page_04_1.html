@@ -12,16 +12,17 @@
 
     <link rel="stylesheet" href="dist/style/global.min.css">
     <link rel="stylesheet" href="dist/style/car.min.css">
-    <title>艾斯移動 - 選擇地點</title>
+    <title>艾斯移動 - 從地圖選擇地點</title>
 </head>
 
-<body>
+<body">
     <div class="wrap">
         <div class="call-car-box">
             <div class="call-car-bg"></div>
             <div class="title-box">
                 <div class="item"><i class="material-icons">&#xE314;</i></div>
                 <div class="item title-name">選擇地點</div>
+                <div class="item"><i class="material-icons">&#xE5D2;</i></div>
             </div>
             <div class="call-car-input">
                 <div class="input-box">
@@ -30,36 +31,31 @@
                         <div class="input">
                             <input type="text" value="目前地點" class="form-control" id="car_01">
                             <img src="/img/location_input.svg" alt="">
-                            <i class="material-icons">&#xE145;</i>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="car_02" class="col-form-label">下車</label>
                         <div class="input">
-                            <input type="text" value="台北市中正區" class="form-control" id="car_02">
+                            <input type="text" value="台北市大安區敦化南路2段" class="form-control" id="car_02">
                             <img src="/img/location_input.svg" alt="">
-                            <i class="material-icons">&#xE145;</i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="choice-list-box">
-            <div class="choice-map-list is-choice">
-                <ul>
-                    <li>
-                        <div class="item icon-box"><i class="material-icons">&#xE192;</i></div>
-                        <div class="item">中正區<small>台北市中正區</small></div>
-                    </li>
-                    <li>
-                        <div class="item icon-box"><i class="material-icons">&#xE192;</i></div>
-                        <div class="item">台北市中正區螢橋國民小學<small>台北市中正區詔安街29街</small></div>
-                    </li>
-                    <li>
-                        <div class="item icon-box"><i class="material-icons">&#xE192;</i></div>
-                        <div class="item">台北市中正區螢橋國民小學<small>台北市中正區詔安街29街</small></div>
-                    </li>
-                </ul>
+            <div class="call-car-map">
+                <div class="map-header">
+                </div>
+                <div id="map"></div>
+                <div class="map-footer">
+                    <div class="footer-inside">
+                         <div class="positioning-box">
+                            <img src="/img/map/positioning.svg" alt="">
+                        </div>
+                        <button class="default-btn">完成</button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -71,16 +67,19 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <script src="js/map.js"></script>
+    <script src="js/map_page_04_1.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwDCH4Um16SCeHmfHaYhGa0vuqM6LNyVE&language=zh-TW&callback=initMap"></script>
+    
 
     <script>
         $(document).ready(function(){
-            $(".input input").focus(function(){
-                $(this).parent().removeClass("add-icon");
-                $(this).parent().addClass("add-icon");
-            }).blur(function(){
-                $(this).parent().removeClass("add-icon");
+            $('.input input').on('change', function(){
+                var inputVal = $(".input input").val();
+                if(inputVal.length > 0){
+                    $(this).parent().addClass("add-icon");
+                }else{
+                    $(this).parent().removeClass("add-icon");
+                }
             })
         })
     </script>
