@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="dist/style/global.min.css">
+    <link rel="stylesheet" href="dist/style/car_setting.min.css">
     <link rel="stylesheet" href="dist/style/car.min.css">
     <title>艾斯移動 - 從地圖選擇地點</title>
 </head>
@@ -20,24 +20,25 @@
         <div class="call-car-box">
             <div class="call-car-bg"></div>
             <div class="title-box">
-                <div class="item"><i class="material-icons">&#xE314;</i></div>
+                <div class="item icon-btn"><i class="material-icons">&#xE314;</i></div>
                 <div class="item title-name">選擇地點</div>
-                <div class="item"><i class="material-icons">&#xE5D2;</i></div>
             </div>
             <div class="call-car-input">
                 <div class="input-box">
-                    <div class="form-group">
+                    <div class="form-group boarding">
                         <label for="car_01" class="col-form-label">上車</label>
                         <div class="input">
                             <input type="text" value="目前地點" class="form-control" id="car_01">
                             <img src="img/location_input.svg" alt="">
+                            <i class="material-icons">&#xE145;</i>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group getoff">
                         <label for="car_02" class="col-form-label">下車</label>
                         <div class="input">
                             <input type="text" value="台北市大安區敦化南路2段" class="form-control" id="car_02">
                             <img src="img/location_input.svg" alt="">
+                            <i class="material-icons">&#xE145;</i>
                         </div>
                     </div>
                 </div>
@@ -53,7 +54,7 @@
                          <div class="positioning-box">
                             <img src="img/map/positioning.svg" alt="">
                         </div>
-                        <button class="default-btn">完成</button>
+                        <button class="btn default-btn">完成</button>
                     </div>
                 </div>
             </div>
@@ -73,13 +74,11 @@
 
     <script>
         $(document).ready(function(){
-            $('.input input').on('change', function(){
-                var inputVal = $(".input input").val();
-                if(inputVal.length > 0){
-                    $(this).parent().addClass("add-icon");
-                }else{
-                    $(this).parent().removeClass("add-icon");
-                }
+            $(".input input").focus(function(){
+                $(this).parent().removeClass("add-icon");
+                $(this).parent().addClass("add-icon");
+            }).blur(function(){
+                $(this).parent().removeClass("add-icon");
             })
         })
     </script>

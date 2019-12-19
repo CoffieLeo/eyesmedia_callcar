@@ -1,4 +1,5 @@
 var map;
+var markersArray = [];
 
 function initMap() {
     // 載入路線服務與路線顯示圖層
@@ -192,6 +193,26 @@ function initMap() {
         ]
     });
 
+    addMarker({lat: 25.051865, lng: 121.544745}, "boarding");
+    addMarker({lat: 25.048136, lng: 121.547851}, "getoff");
+    addMarker({lat: 25.047937, lng: 121.545416}, "taxi");
+
+    function addMarker(latLng, status) {
+        var url = "img/map/";
+        url += status + "-dot.svg";
+      
+        let marker = new google.maps.Marker({
+          map: map,
+          position: latLng,
+          icon: {
+            url: url
+          }
+        });
+      
+        //store the marker object drawn in global array
+        markersArray.push(marker);
+      }
+
     // 放置路線圖層
     directionsDisplay.setMap(map);
 
@@ -245,11 +266,11 @@ function initMap() {
     }];
 
     // Create markers.
-    for (var i = 0; i < features.length; i++) {
-        var marker = new google.maps.Marker({
-            position: features[i].position,
-            icon: icons[features[i].type].icon,
-            map: map
-        });
-    };
+    // for (var i = 0; i < features.length; i++) {
+    //     var marker = new google.maps.Marker({
+    //         position: features[i].position,
+    //         icon: icons[features[i].type].icon,
+    //         map: map
+    //     });
+    // };
 }

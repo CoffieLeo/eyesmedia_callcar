@@ -24,15 +24,7 @@
                 <div class="item title-name">選擇地點</div>
             </div>
             <div class="call-car-input">
-                <div class="input-box">
-                    <div class="form-group boarding">
-                        <label for="car_01" class="col-form-label">上車</label>
-                        <div class="input">
-                            <input type="text" value="目前地點" class="form-control" id="car_01">
-                            <img src="img/location_input.svg" alt="">
-                            <i class="material-icons">&#xE145;</i>
-                        </div>
-                    </div>
+                <div class="input-box single">
                     <div class="form-group getoff">
                         <label for="car_02" class="col-form-label">下車</label>
                         <div class="input">
@@ -70,6 +62,9 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="js/map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwDCH4Um16SCeHmfHaYhGa0vuqM6LNyVE&language=zh-TW&callback=initMap"></script>
 
     <script>
         $(document).ready(function(){

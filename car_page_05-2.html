@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="dist/style/global.min.css">
+    <link rel="stylesheet" href="dist/style/car_setting.min.css">
     <link rel="stylesheet" href="dist/style/car.min.css">
     <title>艾斯移動 - 叫車行程確認-備註</title>
 </head>
@@ -20,7 +20,7 @@
         <div class="call-car-box">
             <div class="call-car-bg"></div>
             <div class="title-box">
-                <div class="item"><i class="material-icons">&#xE314;</i></div>
+                <div class="item icon-btn"><i class="material-icons">&#xE314;</i></div>
                 <div class="item title-name">備註</div>
             </div>
         </div>
@@ -50,8 +50,8 @@
                 </div>
             </div>
             <div class="button-group">
-                <button class="default-btn">套用</button>
-                <button class="cancel-btn">取消</button>
+                <button class="btn default-btn">套用</button>
+                <button class="btn cancel-btn">取消</button>
             </div>
         </div>
     </div>
@@ -71,6 +71,10 @@
                 }else{
                     $('.button-group').removeClass('apply')
                 }
+            })
+            $('.clear-btn').on('click', function(){
+                $('.note-list .item').removeClass('active');
+                $('.button-group').removeClass('apply')
             })
         })
     </script>

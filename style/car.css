@@ -77,6 +77,10 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
   position: relative;
 }
 
+.call-car-box .call-car-input .input-box.single:before {
+  display: none;
+}
+
 .call-car-box .call-car-input .input-box:before {
   content: '';
   display: block;
@@ -90,28 +94,8 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
   background-color: #35A88E;
 }
 
-.call-car-box .call-car-input .input-box .form-group:before {
-  content: '';
-  display: block;
-  width: 11px;
-  height: 11px;
-  background-color: #fff;
-  position: absolute;
-  top: 15px;
-  left: -19px;
-}
-
-.call-car-box .call-car-input .input-box .form-group:first-child:before {
-  border: 3px solid #F55100;
-  border-radius: 100%;
-}
-
 .call-car-box .call-car-input .input-box .form-group:last-child {
   margin-bottom: 0;
-}
-
-.call-car-box .call-car-input .input-box .form-group:last-child:before {
-  border: 3px solid #50E3C2;
 }
 
 .call-car-map {
@@ -175,6 +159,7 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .note-box {
+  height: calc(100vh - 57px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -229,6 +214,10 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 
 .note-box .note-desc textarea {
   background: #E5E9F2;
+}
+
+.note-box .button-group {
+  margin-top: auto;
 }
 
 .note-box .button-group.apply .default-btn {
@@ -515,6 +504,114 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
   color: #4A90E2;
 }
 
+.main-discount-box {
+  position: relative;
+  padding: 15px;
+}
+
+.main-discount-box .discount-top-bg {
+  height: 26px;
+  background: #D9A77A;
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding: 8px;
+  margin: 0 -10px;
+}
+
+.main-discount-box .discount-top-bg .line {
+  height: 10px;
+  background: #828282;
+  border-radius: 5px;
+}
+
+.main-discount-box .discount-content {
+  margin-top: -12px;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  position: relative;
+}
+
+.main-discount-box .discount-content .discount-price {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background: radial-gradient(50% 50% at 50% 50%, #E44D26 0%, #F06428 100%);
+  padding: 2px 5px;
+  color: #fff;
+}
+
+.main-discount-box .discount-content .discount-price:before, .main-discount-box .discount-content .discount-price:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  right: -10px;
+}
+
+.main-discount-box .discount-content .discount-price:before {
+  border-width: 14px 10px 0 0;
+  border-color: #F06428 transparent transparent transparent;
+  top: 0;
+}
+
+.main-discount-box .discount-content .discount-price:after {
+  border-width: 14px 0 0 10px;
+  border-color: transparent transparent transparent #F06428;
+  bottom: 0;
+}
+
+.main-discount-box .discount-content .img-box {
+  text-align: center;
+}
+
+.main-discount-box .discount-content .discount-info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #182B56;
+  margin: 10px 0 0;
+}
+
+.main-discount-box .discount-content .discount-info-box .item {
+  font-size: 13px;
+}
+
+.main-discount-box .discount-content .discount-info-box .item img {
+  width: 15px;
+  vertical-align: sub;
+  margin-right: 5px;
+}
+
+.main-discount-box .discount-content .discount-info-box p:first-child {
+  font-weight: 700;
+}
+
+.main-discount-box .discount-content .discount-info-box p:last-child {
+  font-size: 18px;
+  color: #333;
+}
+
+.main-discount-box .discount-content .discount-desc {
+  margin: 15px 0;
+  text-align: center;
+  color: #4A90E2;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.main-discount-box .discount-content .discount-desc .material-icons {
+  vertical-align: top;
+}
+
 .other-discount-list {
   padding: 15px;
 }
@@ -655,4 +752,308 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 .other-discount-list .discount-item .discount-text p:last-child {
   width: 100%;
   font-size: 13px;
+}
+
+.call-car-info {
+  height: calc(100vh - 57px);
+  padding: 0 15px 15px;
+}
+
+.call-car-info .info-box {
+  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #fff;
+  position: relative;
+  padding: 15px;
+}
+
+.call-car-info .info-box .info-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F2F2F2;
+  border-radius: 10px;
+  padding: 15px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  font-size: 15px;
+  position: relative;
+}
+
+.call-car-info .info-box .info-content.desc-info {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px;
+}
+
+.call-car-info .info-box .info-content.desc-info .title-box {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.call-car-info .info-box .info-content.desc-info .title-box .material-icons {
+  margin-right: 0;
+}
+
+.call-car-info .info-box .info-content.desc-info .desc-info-list {
+  padding-left: 0;
+  border-bottom: 2px solid #4A90E2;
+}
+
+.call-car-info .info-box .info-content.desc-info .desc-info-list:last-child {
+  border-bottom: none;
+}
+
+.call-car-info .info-box .info-content.desc-info .desc-info-list:last-child li span:last-child {
+  font-size: 13px;
+}
+
+.call-car-info .info-box .info-content.desc-info .desc-info-list:before {
+  display: none;
+}
+
+.call-car-info .info-box .info-content.desc-info .desc-info-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #4A90E2;
+}
+
+.call-car-info .info-box .info-content.desc-info .desc-info-list li:last-child {
+  border-bottom: none;
+}
+
+.call-car-info .info-box .info-content.desc-info .desc-info-list li span:last-child {
+  color: #333;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.call-car-info .info-box .info-content:before, .call-car-info .info-box .info-content:after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.call-car-info .info-box .info-content:before {
+  top: -13px;
+}
+
+.call-car-info .info-box .info-content:after {
+  bottom: -13px;
+}
+
+.call-car-info .info-box .info-content:last-child {
+  margin-bottom: 0;
+}
+
+.call-car-info .info-box .info-content .item.status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.call-car-info .info-box .info-content .material-icons {
+  font-size: 35px;
+  margin-right: 15px;
+}
+
+.call-car-info .info-box .info-content p:nth-of-type(1) {
+  color: #9B9B9B;
+}
+
+.call-car-info .info-box .info-content ul {
+  padding-left: 20px;
+  position: relative;
+}
+
+.call-car-info .info-box .info-content ul:before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 5px;
+  background-color: #9B9B9B;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 6px;
+}
+
+.call-car-info .info-box .info-content ul li {
+  font-size: 13px;
+  color: #9B9B9B;
+  font-weight: 700;
+  position: relative;
+}
+
+.call-car-info .info-box .info-content .boarding:before, .call-car-info .info-box .info-content .getoff:before {
+  top: 4px;
+  border-color: #9B9B9B;
+}
+
+.call-car-info .pay-method-box {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #fff;
+  position: relative;
+  padding: 15px;
+}
+
+.call-car-info .pay-method-box .pay-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.call-car-info .pay-method-box .pay-title img {
+  width: 48px;
+  margin-right: 15px;
+}
+
+.call-car-info .pay-method-box .pay-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.call-car-info .pay-method-box .pay-content .content-box {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.call-car-info .pay-method-box .pay-slider {
+  margin: 0 -15px;
+}
+
+.call-car-info .pay-method-box .pay-slider.has-choice .pay-item {
+  -webkit-filter: grayscale(1);
+  opacity: .5;
+}
+
+.call-car-info .pay-method-box .pay-slider.has-choice .pay-item.is-choice {
+  -webkit-filter: grayscale(0);
+  opacity: 1;
+}
+
+.call-car-info .pay-method-box .pay-slider .pay-item {
+  padding: 10px;
+}
+
+.call-car-info .pay-method-box .pay-slider .pay-item .img-box {
+  width: 100%;
+  height: 100%;
+  border: 1px #eee solid;
+  border-radius: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.call-car-info .pay-method-box .pay-slider .pay-item img {
+  width: 100%;
+}
+
+.call-car-info .pay-method-box .pay-list-group {
+  padding-bottom: 15px;
+  margin-top: 20px;
+  border-bottom: 1px #182B56 solid;
+}
+
+.call-car-info .pay-method-box .pay-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+}
+
+.call-car-info .pay-method-box .pay-list input {
+  padding: 3px 10px;
+  border: 1px #eee solid;
+  border-radius: 5px;
+  text-align: right;
+  color: #4A90E2;
+}
+
+.call-car-info .pay-method-box .pay-list .use-discount {
+  color: #4A90E2;
+}
+
+.call-car-info .pay-method-box .pay-list .use-discount .material-icons {
+  vertical-align: top;
+}
+
+.call-car-info .pay-method-box .button-box {
+  margin-top: auto;
 }
