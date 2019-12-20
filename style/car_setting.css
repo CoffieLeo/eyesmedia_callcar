@@ -422,8 +422,9 @@ button, input {
 .btn {
   width: 100%;
   border-radius: 30px;
-  padding: 15px;
-  font-size: 18px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
 }
 
 .default-btn {
@@ -432,8 +433,8 @@ button, input {
           flex: none;
   width: 100%;
   color: #fff;
-  background: -webkit-gradient(linear, right top, left top, from(#568EE3), to(#36D1DB));
-  background: linear-gradient(270deg, #568EE3 0%, #36D1DB 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#568EE3), to(#36D1DB));
+  background-image: linear-gradient(to right, #568EE3 0%, #36D1DB 100%);
   margin-top: 15px;
 }
 
@@ -454,6 +455,38 @@ button, input {
   margin-top: 15px;
   -webkit-box-shadow: inset 0 0px 0px 1px #333;
           box-shadow: inset 0 0px 0px 1px #333;
+}
+
+.or-box {
+  padding: 0 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.or-box span {
+  display: inline-block;
+  position: relative;
+  padding: 0 30px;
+}
+
+.or-box span:before, .or-box span:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #273D52;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.or-box span:before {
+  left: -100%;
+}
+
+.or-box span:after {
+  right: -100%;
 }
 
 footer {

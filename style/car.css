@@ -77,8 +77,47 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
   position: relative;
 }
 
-.call-car-box .call-car-input .input-box.single:before {
+.call-car-box .call-car-input .input-box.single:before, .call-car-box .call-car-input .input-box.use-code:before {
   display: none;
+}
+
+.call-car-box .call-car-input .input-box.use-code {
+  padding: 15px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0;
+}
+
+.call-car-box .call-car-input .input-box.use-code .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 0;
+}
+
+.call-car-box .call-car-input .input-box.use-code .input input {
+  border-bottom: none;
+  background: rgba(142, 142, 147, 0.12);
+  border-radius: 10px;
+}
+
+.call-car-box .call-car-input .input-box.use-code .input .item:first-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 10px;
+}
+
+.call-car-box .call-car-input .input-box.use-code .input .item:last-child {
+  width: 70px;
+}
+
+.call-car-box .call-car-input .input-box.use-code .input .item:last-child button {
+  width: 100%;
+}
+
+.call-car-box .call-car-input .input-box.use-code button {
+  margin-top: 0;
 }
 
 .call-car-box .call-car-input .input-box:before {
@@ -1056,4 +1095,65 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 
 .call-car-info .pay-method-box .button-box {
   margin-top: auto;
+}
+
+.choice-discount-ticket {
+  padding: 15px;
+}
+
+.choice-discount-ticket .discount-ticket {
+  border-radius: 10px 10px 0 0;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
+}
+
+.choice-discount-ticket .title {
+  text-align: center;
+  padding: 15px;
+  border-bottom: 1px #eee solid;
+}
+
+.choice-discount-ticket .ticket-list > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+  border-bottom: 1px #eee solid;
+  cursor: pointer;
+}
+
+.choice-discount-ticket .ticket-list > li:last-child {
+  border-bottom: none;
+}
+
+.choice-discount-ticket .ticket-list > li .item.img-box {
+  width: 70px;
+  margin-right: 10px;
+}
+
+.choice-discount-ticket .ticket-list > li .item.img-box img {
+  width: 100%;
+}
+
+.choice-discount-ticket .ticket-list > li .item.desc-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.choice-discount-ticket .ticket-list > li .item .team-name {
+  font-size: 14px;
+  color: #182B56;
+  font-weight: 700;
+}
+
+.choice-discount-ticket .ticket-list > li .item .team-discount {
+  font-size: 16px;
+  color: #4A90E2;
+}
+
+.choice-discount-ticket .ticket-list > li .item .date-limit {
+  font-size: 12px;
+  color: #182B56;
 }

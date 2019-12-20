@@ -68,9 +68,38 @@ body{
             background-color: $default-white;
             padding: 15px 25px 15px 40px;
             position: relative;
-            &.single{
+            &.single, &.use-code{
                 &:before{
                     display: none;
+                }
+            }
+            &.use-code{
+                padding: 15px;
+                box-shadow: none;
+                border-radius: 0;
+                .input{
+                    display: flex;
+                    margin-left: 0;
+                    input{
+                        border-bottom: none;
+                        background: rgba(142, 142, 147, 0.12);
+                        border-radius: 10px;
+                    }
+                    .item{
+                        &:first-child{
+                            flex: 1;
+                            margin-right: 10px;
+                        }
+                        &:last-child{
+                            width: 70px;
+                            button{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                button{
+                    margin-top: 0;
                 }
             }
             &:before{
@@ -830,6 +859,58 @@ body{
         }
         .button-box{
             margin-top: auto;
+        }
+    }
+}
+
+// page 13
+.choice-discount-ticket{
+    padding: 15px;
+    .discount-ticket{
+        border-radius: 10px 10px 0 0;
+        box-shadow: 0 0 5px rgba(0,0,0,.2);
+        margin-top: 15px;
+    }
+    .title{
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px #eee solid;
+    }
+    .ticket-list{
+        >li{
+            display: flex;
+            padding: 15px;
+            border-bottom: 1px #eee solid;
+            cursor: pointer;
+            &:last-child{
+                border-bottom: none;
+            }
+            .item{
+                &.img-box{
+                    width: 70px;
+                    margin-right: 10px;
+                    img{
+                        width: 100%;
+                    }
+                }
+                &.desc-box{
+                    flex: 1;
+                }
+                .team-name{
+                    font-size: 14px;
+                    color: #182B56;
+                    font-weight: 700;
+                }
+                .team-discount{
+                    font-size: 16px;
+                    color: #4A90E2;
+                }
+                .date-limit{
+                    font-size: 12px;
+                    color: #182B56;
+                }
+
+            }
         }
     }
 }
