@@ -201,7 +201,7 @@ function initMap() {
             icon: iconBase + 'user.svg'
         },
         taxi: {
-            icon: iconBase + 'taxi.svg'
+            icon: iconBase + 'taxi-dot.svg'
         }
     };
 
