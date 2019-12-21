@@ -10,9 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- slick -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-
+    
     <link rel="stylesheet" href="dist/style/car_setting.min.css">
     <link rel="stylesheet" href="dist/style/car.min.css">
     <title>艾斯移動 - 付款結果</title>
@@ -97,40 +95,6 @@
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
-
-    <!-- slick -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.pay-slider').slick({
-                arrows: false,
-                infinite: false,
-                slidesToShow: 4.3,
-            });
-
-            $('.pay-slider .pay-item').on('click', function(){
-                $('.pay-slider .pay-item').removeClass('is-choice');
-                $(this).addClass('is-choice');
-                $(this).closest('.pay-slider').addClass('has-choice');
-            })
-
-            var price = 170;
-            $('#pay-price').on('keyup', function(){
-                var value = $(this).val();
-                if(value == ''){
-                    value = 0;
-                }
-                $('.pay-money').text(value);
-                if(value.length > 0 && value >= price ){
-                    $('.button-box').addClass('pay-ok');
-                    $('.disabled-btn').removeClass('disabled-btn').addClass('default-btn');
-                }else{
-                    $('.button-box').removeClass('pay-ok')
-                    $('.default-btn').removeClass('default-btn').addClass('disabled-btn');
-                }
-            })
-        });
     </script>
 
 </body>
