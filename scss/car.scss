@@ -787,6 +787,24 @@ body{
         background-color: $default-white;
         position: relative;
         padding: 15px;
+        .pay-taxi-money{
+            margin: 15px auto 30px;
+            text-align: center;
+            .money-title{
+                font-size: 20px;
+                font-weight: 700;
+            }
+            .money-txt{
+                color: #4A90E2;
+                font-size: 25px;
+                margin: 5px 0;
+            }
+            .money-date{
+                font-size: 12px;
+                color: #273D52;
+                letter-spacing: 2px;
+            }
+        }
         .pay-title{
             display: flex;
             align-items: center;
@@ -850,7 +868,7 @@ body{
                 text-align: right;
                 color: #4A90E2;
             }
-            .use-discount{
+            .use-discount, .pay-method-txt, .pay-money-txt{
                 color: #4A90E2;
                 .material-icons{
                     vertical-align: top;
@@ -912,5 +930,12 @@ body{
 
             }
         }
+    }
+}
+
+// page 15
+#pay-final{
+    .pay-title{
+        justify-content: center;
     }
 }

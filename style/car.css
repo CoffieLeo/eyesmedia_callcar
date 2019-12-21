@@ -987,6 +987,28 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
   padding: 15px;
 }
 
+.call-car-info .pay-method-box .pay-taxi-money {
+  margin: 15px auto 30px;
+  text-align: center;
+}
+
+.call-car-info .pay-method-box .pay-taxi-money .money-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.call-car-info .pay-method-box .pay-taxi-money .money-txt {
+  color: #4A90E2;
+  font-size: 25px;
+  margin: 5px 0;
+}
+
+.call-car-info .pay-method-box .pay-taxi-money .money-date {
+  font-size: 12px;
+  color: #273D52;
+  letter-spacing: 2px;
+}
+
 .call-car-info .pay-method-box .pay-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1085,11 +1107,11 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
   color: #4A90E2;
 }
 
-.call-car-info .pay-method-box .pay-list .use-discount {
+.call-car-info .pay-method-box .pay-list .use-discount, .call-car-info .pay-method-box .pay-list .pay-method-txt, .call-car-info .pay-method-box .pay-list .pay-money-txt {
   color: #4A90E2;
 }
 
-.call-car-info .pay-method-box .pay-list .use-discount .material-icons {
+.call-car-info .pay-method-box .pay-list .use-discount .material-icons, .call-car-info .pay-method-box .pay-list .pay-method-txt .material-icons, .call-car-info .pay-method-box .pay-list .pay-money-txt .material-icons {
   vertical-align: top;
 }
 
@@ -1156,4 +1178,10 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 .choice-discount-ticket .ticket-list > li .item .date-limit {
   font-size: 12px;
   color: #182B56;
+}
+
+#pay-final .pay-title {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
