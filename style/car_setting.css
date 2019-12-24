@@ -277,6 +277,10 @@ a:hover, a:focus, a:visited {
   padding: 15px;
 }
 
+.title-box .item {
+  min-width: 30px;
+}
+
 .title-box .item.icon-btn .material-icons {
   font-size: 30px;
 }
