@@ -436,6 +436,11 @@ button, input {
   background-image: -webkit-gradient(linear, left top, right top, from(#568EE3), to(#36D1DB));
   background-image: linear-gradient(to right, #568EE3 0%, #36D1DB 100%);
   margin-top: 15px;
+  outline: none;
+}
+
+.default-btn:hover {
+  color: #fff;
 }
 
 .default-btn.btn-sm {

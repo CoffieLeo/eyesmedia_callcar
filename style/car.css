@@ -342,6 +342,10 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
   margin: auto;
 }
 
+.popup-box small {
+  margin-bottom: 5px;
+}
+
 .discount-tikcet-box {
   display: -webkit-box;
   display: -ms-flexbox;

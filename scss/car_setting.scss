@@ -283,6 +283,10 @@ button, input{
     color: $default-white;
     background-image: linear-gradient(to right, #568EE3 0%, #36D1DB 100%);
     margin-top: 15px;
+    outline: none;
+    &:hover{
+        color: $default-white;
+    }
     &.btn-sm{
         width: 75%;
         padding: 5px;
