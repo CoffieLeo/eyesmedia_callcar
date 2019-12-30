@@ -2,6 +2,7 @@
 @import '../style/module/reset';
 @import '../style/module/variable';
 @import '../style/module/mixin';
+@import '../style/module/global';
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,900&display=swap&subset=chinese-traditional');
 
 body, html{ 
@@ -131,28 +132,6 @@ a{
 
 .form-control{
     box-shadow: none;
-}
-
-.wrap{
-    overflow-x: hidden;
-}
-
-.title-box{
-    display: flex;
-    padding: 15px;
-    .item{
-        min-width: 30px;
-        &.icon-btn{
-            .material-icons{
-                font-size: 30px;
-            }
-        }
-    }
-    .title-name{
-        font-size: 18px;
-        font-weight: 700;
-        margin: auto;
-    }
 }
 
 .map-header, .map-footer{

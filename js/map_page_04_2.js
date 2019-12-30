@@ -191,7 +191,7 @@ function initMap() {
         ]
     });
 
-    var iconBase = 'img/map/';
+    var iconBase = 'img/callcar/map/';
 
     var icons = {
         location: {

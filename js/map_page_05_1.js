@@ -198,7 +198,7 @@ function initMap() {
     addMarker({lat: 25.047937, lng: 121.545416}, "taxi");
 
     function addMarker(latLng, status) {
-        var url = "img/map/";
+        var url = "img/callcar/map/";
         url += status + "-dot.svg";
       
         let marker = new google.maps.Marker({
@@ -240,7 +240,7 @@ function initMap() {
         }
     });
 
-    var iconBase = 'img/map/';
+    var iconBase = 'img/callcar/map/';
 
     var icons = {
         location: {

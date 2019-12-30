@@ -90,6 +90,47 @@ i {
   vertical-align: middle;
 }
 
+.wrap {
+  overflow-x: hidden;
+}
+
+.title-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+}
+
+.title-box .item {
+  min-width: 30px;
+  text-align: center;
+}
+
+.title-box .item.icon-btn .material-icons {
+  font-size: 30px;
+}
+
+.title-box .title-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin: auto;
+}
+
+.nav-tabs .nav-item {
+  margin-bottom: 0;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  border-radius: 0;
+  color: #182B56;
+}
+
+.nav-tabs .nav-link.active {
+  border: none;
+  color: #4A90E2;
+}
+
 body, html {
   height: 100%;
   -webkit-box-sizing: border-box;
@@ -264,31 +305,6 @@ a:hover, a:focus, a:visited {
 .form-control {
   -webkit-box-shadow: none;
           box-shadow: none;
-}
-
-.wrap {
-  overflow-x: hidden;
-}
-
-.title-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 15px;
-}
-
-.title-box .item {
-  min-width: 30px;
-}
-
-.title-box .item.icon-btn .material-icons {
-  font-size: 30px;
-}
-
-.title-box .title-name {
-  font-size: 18px;
-  font-weight: 700;
-  margin: auto;
 }
 
 .map-header, .map-footer {

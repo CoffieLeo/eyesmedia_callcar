@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.css">
+    <style>
+        .swiper-slide {
+            height: 300px;
+            width: 100%;
+            background-image: url(https://www.w3schools.com/css/trolltunga.jpg);
+        }
+
+        .swiper-container {
+            width: 600px;
+            height: 300px;
+        }
+
+        .swiper-counter,
+        .swiper-counter span {
+            position: relative;
+            bottom: 10px;
+            right: 10px;
+            z-index: 99999;
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .swiper-counter .next,
+        .swiper-counter .count {
+            position: absolute;
+        }
+
+        .swiper-counter .next {
+            transform: translateY(-12px);
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="swiper-container swiper-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">lide 1</div>
+            <div class="swiper-slide">lide 2</div>
+            <div class="swiper-slide">lide 3</div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-counter"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+    <!-- <script src=""></script>
+    <script src=""></script>
+    <script src=""></script> -->
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            // direction: 'vertical',
+            loop: false,
+
+            // If we need pagination
+            pagination: '.swiper-pagination',
+            onSlideChangeStart: photos_change
+        })
+
+
+        var counter = $('.swiper-counter');
+        var currentCount = $('<span class="count">1<span/>');
+        counter.append(currentCount);
+
+        function photos_change(swiper) {
+            var index = swiper.activeIndex + 1,
+                // $current = $(".photo-slide").eq(index),
+
+            var prevCount = $('.count');
+            currentCount = $('<span class="count next">' + index + '<span/>');
+            currentCount.appendTo(counter);
+        }
+    </script>
+</body>
+
+</html>
