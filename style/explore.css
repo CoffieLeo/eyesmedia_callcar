@@ -689,22 +689,22 @@ body.store-info-page .title-box .favorite {
 
 /*HTML and CSS only multilevel drop down menu*/
 /*-- parent nav--*/
-.navContainer {
+.nav-container {
   height: 100%;
   background-color: #fff;
 }
 
-.navContainer nav {
+.nav-container nav {
   width: 25%;
   height: inherit;
 }
 
-.navContainer nav > ul {
+.nav-container nav > ul {
   width: 100%;
   height: inherit;
 }
 
-.navContainer nav li > a {
+.nav-container nav li > a {
   display: block;
   position: relative;
   padding: 10px 15px;
@@ -713,29 +713,29 @@ body.store-info-page .title-box .favorite {
   font-size: 14px;
 }
 
-.navContainer nav .levelOne > li.active a {
+.nav-container nav .levelOne > li.active a {
   background-color: #F2F5FA;
 }
 
-.navContainer nav .levelTwo {
+.nav-container nav .levelTwo {
   width: 25%;
 }
 
-.navContainer nav .levelTwo > li.active a {
+.nav-container nav .levelTwo > li.active a {
   background-color: #E5E9F2;
 }
 
-.navContainer nav .levelThree {
+.nav-container nav .levelThree {
   width: 200%;
   height: 100%;
   background-color: #E5E9F2;
 }
 
-.navContainer nav .levelThree .filter-all a {
+.nav-container nav .levelThree .filter-all a {
   color: #48A2DE;
 }
 
-.navContainer nav .levelThree a {
+.nav-container nav .levelThree a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -744,7 +744,7 @@ body.store-info-page .title-box .favorite {
           align-items: center;
 }
 
-.navContainer nav .levelThree a .material-icons {
+.nav-container nav .levelThree a .material-icons {
   font-size: 18px;
   margin-right: 5px;
 }
