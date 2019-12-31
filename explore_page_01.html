@@ -167,7 +167,10 @@
                     <nav>
                         <ul class="levelOne">
                             <li>
-                                <a href='#'>area</a>
+                                <a href='#'>附近(GPS)</a>
+                            </li>
+                            <li>
+                                <a href='#'>地區選單</a>
                             </li>
                             <li>
                                 <a href='#'>高雄</a>
@@ -298,7 +301,10 @@
                     <nav>
                         <ul class="levelOne">
                             <li>
-                                <a href='#'>type</a>
+                                <a href='#'>附近(GPS)</a>
+                            </li>
+                            <li>
+                                <a href='#'>類別選單</a>
                             </li>
                             <li>
                                 <a href='#'>高雄</a>
@@ -429,7 +435,10 @@
                     <nav>
                         <ul class="levelOne">
                             <li>
-                                <a href='#'>discount</a>
+                                <a href='#'>附近(GPS)</a>
+                            </li>
+                            <li>
+                                <a href='#'>優惠選單</a>
                             </li>
                             <li>
                                 <a href='#'>高雄</a>
@@ -573,31 +582,32 @@
                 mainBox.css({ 'height': 'calc(100vh - ' + topBox.height() + 'px)' });
             }).trigger('resize');
 
+            // 開啟篩選清單
             $('.filter-item-box .filter-item').on('click', function(){
-                $('.filter-item-box .filter-item').removeClass('active');
-                $(this).addClass('active');
-                
+                $(this).toggleClass('active').siblings().removeClass('active');
                 var filter = $(this).data('filter');
-                $('.explore-filter-content').removeClass('is-open');
-                $('#' + filter).addClass('is-open');
+                $('#' + filter).toggleClass('is-open');
+                $('#' + filter).siblings().removeClass('is-open');
             })
-
             
-            // 篩選清單
-            $('.navContainer .levelOne li').on('click', function(){
-                $('.navContainer .levelOne > li').removeClass('active');
+            // 篩選清單層級樣式
+            $('.nav-container .levelOne > li').on('click', function(){
+                $('.nav-container .levelOne > li').removeClass('active');
                 $(this).addClass('active');
             })
 
-            $('.navContainer .levelTwo > li').on('click', function(){
+            $('.nav-container .levelTwo > li').on('click', function(){
                 console.log('here');
-                $('.navContainer .levelTwo > li').removeClass('active');
+                $('.nav-container .levelTwo > li').removeClass('active');
                 $(this).addClass('active');
             })
 
-
-
-
+            $('body').on('click', function(evt){
+                console.log(evt.target.className);
+                if($(evt.target).attr('class') != 'filter-item' && $(evt.target).attr('class') != 'nav-container'){
+                    $('.explore-filter-content').removeClass('is-open');
+                }
+            })
 
         })
     </script>
