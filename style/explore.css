@@ -294,6 +294,7 @@ body.store-info-page .title-box .favorite {
 .explore-container .explore-card-list {
   height: 100%;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .explore-container .explore-filter-content {

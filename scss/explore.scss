@@ -80,6 +80,7 @@ body{
     .explore-card-list{
         height: 100%;
         overflow: auto;
+        -webkit-overflow-scrolling: touch;
     }
     .explore-filter-content{
         position: absolute;
