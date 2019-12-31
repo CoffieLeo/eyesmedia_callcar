@@ -314,6 +314,7 @@
             $('.filter-item-box .filter-item').on('click', function(){
                 $('.filter-item-box .filter-item').removeClass('active');
                 $(this).addClass('active');
+                $(this).parents().find('.explore-filter-content').removeClass('is-open');
                 $(this).parents().find('.explore-filter-content').addClass('is-open');
             })
 

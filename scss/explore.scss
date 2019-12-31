@@ -1,5 +1,7 @@
+@import '../style/module/reset';
 @import '../style/module/mixin';
 @import '../style/module/variable';
+@import '../style/module/global';
 
 body{
     &.store-info-page{
@@ -71,7 +73,7 @@ body{
 }
 
 .explore-container{
-    height: 100vh;
+    // height: 100vh;
     overflow: hidden;
     background-color: $default-white;
     position: relative;
@@ -191,6 +193,12 @@ body{
                     flex-wrap: wrap;
                     max-height: auto;
                     transition: max-height 0s ease-out;
+                    .item{
+                        span{
+                            margin-right: 5px;
+                            font-weight: 500;
+                        }
+                    }
                     .time-list{
                         flex: none;
                         width: 100%;
