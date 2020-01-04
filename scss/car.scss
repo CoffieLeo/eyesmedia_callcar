@@ -149,6 +149,9 @@ body{
             color: #9B9B9B;
         }
     }
+    ul{
+        padding-left: 0;
+    }
     li{
         padding: 15px 25px;
         border-top: 1px #ddd solid;
@@ -169,6 +172,7 @@ body{
         .material-icons{
             color: $default-white;
             font-size: 20px;
+            vertical-align: bottom;
         }
     }
 }
@@ -240,6 +244,7 @@ body{
         position: relative;
         padding-left: 25px;
         text-align: left;
+        list-style-type: none;
         &:before{
             content: '';
             display: block;
@@ -252,7 +257,7 @@ body{
             left: 15px;
         }
         li{
-            padding: 20px 0;
+            margin-bottom: 40px;
             position: relative;
             &:before{
                 content: '';
@@ -542,6 +547,16 @@ body{
         &:last-child{
             margin-bottom: 0;
         }
+        &.can-use{
+            .default-btn{
+                background-color: $default-white;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-image: -webkit-gradient(linear, left top, right top, from(#568EE3), to(#36D1DB));
+                background-image: linear-gradient(to right, #568EE3 0%, #36D1DB 100%);
+                border: 1px #568EE3 solid;
+            }
+        }
         .item{
             flex: none;
             display: flex;
@@ -630,6 +645,9 @@ body{
                     width: 100%;
                     font-size: 13px;
                 }
+            }
+            .material-icons{
+                vertical-align: bottom;
             }
         }
     }

@@ -167,6 +167,10 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
   color: #9B9B9B;
 }
 
+.choice-map-list ul {
+  padding-left: 0;
+}
+
 .choice-map-list li {
   padding: 15px 25px;
   border-top: 1px #ddd solid;
@@ -195,6 +199,7 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 .choice-map-list .icon-box .material-icons {
   color: #fff;
   font-size: 20px;
+  vertical-align: bottom;
 }
 
 .note-box {
@@ -287,6 +292,7 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
   position: relative;
   padding-left: 25px;
   text-align: left;
+  list-style-type: none;
 }
 
 .popup-box .callcar-info:before {
@@ -303,7 +309,7 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 }
 
 .popup-box .callcar-info li {
-  padding: 20px 0;
+  margin-bottom: 40px;
   position: relative;
 }
 
@@ -674,6 +680,15 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
   margin-bottom: 0;
 }
 
+.other-discount-list .discount-item.can-use .default-btn {
+  background-color: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, from(#568EE3), to(#36D1DB));
+  background-image: linear-gradient(to right, #568EE3 0%, #36D1DB 100%);
+  border: 1px #568EE3 solid;
+}
+
 .other-discount-list .discount-item .item {
   -webkit-box-flex: 0;
       -ms-flex: none;
@@ -795,6 +810,10 @@ body.open-popup .popup-box, body.open-popup .overlay, body.open-popup .search-ta
 .other-discount-list .discount-item .discount-text p:last-child {
   width: 100%;
   font-size: 13px;
+}
+
+.other-discount-list .discount-item .discount-text .material-icons {
+  vertical-align: bottom;
 }
 
 .call-car-info {
