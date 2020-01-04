@@ -414,7 +414,7 @@ body{
         // }
         .levelOne{
             >li{
-                &.active{
+                &.active, &:hover{
                     a{
                         background-color: #F2F5FA;
                     }
@@ -424,7 +424,7 @@ body{
         .levelTwo{
             width: 25%;
             >li{
-                &.active{
+                &.active, &:hover{
                     a{
                         background-color: #E5E9F2;
                     }

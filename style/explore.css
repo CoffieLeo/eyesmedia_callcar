@@ -713,7 +713,7 @@ body.store-info-page .title-box .favorite {
   font-size: 14px;
 }
 
-.nav-container nav .levelOne > li.active a {
+.nav-container nav .levelOne > li.active a, .nav-container nav .levelOne > li:hover a {
   background-color: #F2F5FA;
 }
 
@@ -721,7 +721,7 @@ body.store-info-page .title-box .favorite {
   width: 25%;
 }
 
-.nav-container nav .levelTwo > li.active a {
+.nav-container nav .levelTwo > li.active a, .nav-container nav .levelTwo > li:hover a {
   background-color: #E5E9F2;
 }
 
