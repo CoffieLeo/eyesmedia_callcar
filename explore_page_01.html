@@ -592,7 +592,7 @@
             
             // 篩選清單層級樣式
             $('.nav-container .levelOne li a').on('click', function(){
-                $(this).parent().removeClass('active');
+                $('.nav-container .levelOne li').removeClass('active');
                 $(this).parent().addClass('active');
             })
 
