@@ -591,12 +591,12 @@
             })
             
             // 篩選清單層級樣式
-            $('.nav-container .levelOne li').on('click', function(){
-                $('.nav-container .levelOne li').not(this).removeClass('active');
-                $(this).addClass('active');
-            })
+            // $('.nav-container .levelOne li').on('click', function(){
+            //     $('.nav-container .levelOne li').not(this).removeClass('active');
+            //     $(this).addClass('active');
+            // })
 
-            $('.nav-container .levelOne li a').on('click touchend', function(e) {
+            $('.nav-container .levelOne li a').on('touchend click', function(e) {
                 var el = $(this);
                 var link = el.attr('href');
                 window.location = link;
