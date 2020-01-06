@@ -561,5 +561,7 @@ nav>ul>li>ul>li>ul {
 nav>ul>li:hover>ul,
 nav>ul>li>ul>li:hover>ul,
 nav>ul>li>ul>li>ul>li:hover ul {
-    display: inline-block;
+    @media screen and (min-width: 768px){
+        display: block;   
+    }
 }
